@@ -1,0 +1,71 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/all.min.css'%}" />
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css.map' %}" />
+<link rel="stylesheet" href="{% static 'css/model.css'%}" />
+{% block content %}
+<section class="container">
+  <div class="select1">
+    <form>
+      <label for="select" class="label1">Mode:</label>
+      <select class="selectmode">
+        <option selected>summary</option>
+        <option value="1">summary</option>
+        <option value="2">summary</option>
+        <option value="3">summary</option>
+      </select>
+    </form>
+  </div>
+  <div class="select2">
+    <form>
+      <label for="select2" class="label2">Language:</label>
+      <select class="selectmode2">
+        <option selected>Detected</option>
+        <option value="1">Detected</option>
+        <option value="2">Detected</option>
+        <option value="3">Detected</option>
+      </select>
+    </form>
+  </div>
+  <div class="container3">
+    <div class="row">
+      <div class="col-6 write">
+        <form method="POST" {% url 'model' %}>
+          {% csrf_token %}
+          <label for="text" class="form-label label2">summarize:</label><br>
+          <textarea rows="10" cols="50" name="text" required class="originaltext"
+          placeholder="Begin typing or paste text here."></textarea>
+          <input type="submit" value="Summarize" class="Paraphrasedbtn">
+        </form>
+      </div>
+      <div class="col-6 Paraphrased">
+        <label for="text" class="form-label label2">
+          {% if summary %}
+          <ul>
+            {% for sentance in summary %}
+              <li>{{ sentance }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %} 
+        </label>     
+        {% comment %} <form method="POST" {% url 'model' %}>
+          {% if summaries %}
+          <label for="text" class="form-label label2">Summary:</label>
+          {% for summary in summaries %}
+          <textarea rows="10" cols="50" name="text" required class="originaltext"
+            placeholder="Begin typing or paste text here.">{{ summary }}</textarea>
+          {% endfor %}
+          {% endif %}
+        </form> {% endcomment %}
+      </div>
+    </div>
+  </div>
+</section>
+<!--end selection-->
+<!-- links -->
+<script src="{% static 'js/all.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js.map' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock content %}

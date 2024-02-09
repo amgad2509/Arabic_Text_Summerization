@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:  'Poppins', sans-serif;
+}
+:root{
+    --First-color:#161624;
+    --Second-color:#f2363c;
+    --third-color:#573b8a;
+} 
+body{
+    width: 100%;
+    background-color: #000;
+    height: 100vh;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+}
+.container {
+    background-color: #101730;
+	position: relative;
+    top: 50px;
+    border-radius: 25px;
+    height: 600px;
+}
+.label1 , .label2{
+    font-size: 22px;
+    color: #fff;
+}
+.select2 .selectmode2{
+    background-color: #101730;
+    width: 350px;
+    height: 43px;
+    font-size: 19px;
+    color: #fff;
+    border:1px solid #ffffff;
+    border-radius: 6px;
+}
+.select1 .selectmode{
+    background-color: #101730;
+    width: 350px;
+    height: 43px;
+    font-size: 19px;
+    color: #fff;
+    border:1px solid #ffffff;
+    border-radius: 6px;
+}
+.select1{
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.select2{
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+.container3{
+    position: relative;
+    top: 50px;
+    left: 1px;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+ }
+.container3 .write{
+    width: 200px;
+    position: relative;
+    right: 420px;
+}
+.label2{
+    font-size: 15px;
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+    top: 10px;
+}
+ .originaltext{
+    width: 580px;
+    height:330px;
+    background-color: #101730;
+    color: #ffffff;
+    border: none;
+    font-size: 19px;
+    padding: 8px;
+    border-radius: 15px;
+    position: relative;
+    top: 20px;
+ }
+ ::placeholder {
+   color: rgb(255, 255, 255);
+   font-size:15px;
+ }
+ .Paraphrased{
+     padding: 0px;
+     height: 400px;
+     border-left: 1px solid #ffffff;
+ 
+ }
+ .Paraphrased h4{
+    color: #ffffff;
+    margin: 10px 20px;
+    font-size: 15px;
+    position: relative;
+    top: 10px;
+ }
+.sectioncount{
+    position: relative;
+    top: 50px;
+}
+.charactersdiv{
+    padding: 0;
+    border-left:1px solid #ffffff ;
+    margin-right: 40px;
+   
+}
+.charactersdiv p{
+    font-size: 20px;
+    color: #ffffff;
+    margin: 10px 20px;
+    position: relative;
+    top: 10px;
+}
+.Paraphrasedbtn{
+     padding: 10px;
+     color: #ffffff;
+     font-size: 19px;
+     margin: 10px;
+     background-color: #6444F5;
+     border: none;
+     border-radius: 10px;
+     position: relative;
+     top: 70px;
+     left: 450px;
+}
+.divcont p{
+    font-size: 20px;
+    color: #ffffff;
+    margin: 10px;
+    position: relative;
+    top: 10px;
+}

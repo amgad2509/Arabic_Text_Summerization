@@ -1,0 +1,65 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/all.min.css'%}" />
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css.map' %}" />
+<link rel="stylesheet" href="{% static 'css/style.css'%}" />
+{% block content %}
+
+<!-- Animation -->
+<section>
+  <video src="{% static 'img/smoke.mp4' %}" muted="" autoplay=""></video>
+  <h1>
+    <span>S</span>
+    <span>u</span>
+    <span>m</span>
+    <span>m</span>
+    <span>a</span>
+    <span>r</span>
+    <span>i</span>
+    <span>z</span>
+    <span>e</span>
+  </h1>
+</section>
+<!-- End Animation-->
+<!-- Start info -->
+<div class="container" id="container">
+  <div class="cryptocurrencies-info-cards row">
+    <div class="info-card col-lg-6 col-sm-12">
+      <img src="{% static 'img/arabic.jpg' %}" alt="" class="summary" />
+    </div>
+    <div class="info-card col-lg-6 col-sm-12">
+      <h2>Arabic Auto Summarizer</h2>
+      <i class="fas fa-magic icon"></i>
+      <p>
+        Summazer, the deep summarizer for 'squeezing' a text and extracting its
+        juice: the main concepts and phrases with the most information content,
+        to produce an automatic online summary of the processed text. Its
+        operation is very simple: to summarise a text or web page, simply enter
+        the text or page address, select the language - in addition to English,
+        it supports texts in: German, Spanish, French, Italian, Greek, Russian,
+        Arabic, Chinese and many other languages - and the desired summary
+        length. The "summarizer" app also performs spell-checking and
+        correction, grammatical and morphological analysis to obtain: the most
+        important highlighted sentences, the main concepts/characters, the most
+        relevant locations mentioned in the text, and the trend of semantic
+        relevance. Summazer highlights the main phrases and the font size is
+        proportional to their semantic relevance. With the identified keywords
+        it generates meaningful titles and hashtags. With a click on the
+        hashtags extracted from the text, you can obtain images to enrich your
+        articles or posts.
+      </p>
+      <button>
+        <a class="button" href="{% url 'model' %}">Go to model</a>
+      </button>
+    </div>
+  </div>
+  <!-- Cryptocurrencies section-->
+</div>
+<!-- End info -->
+<!-- links -->
+<script src="{% static 'js/all.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js.map' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock content %}
